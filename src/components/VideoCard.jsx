@@ -6,7 +6,7 @@ import background_video from "../assets/background_video.webm"
 import "./Scrollbar.css";
 import { API } from '../ApiClient';
 import axios from "axios";
-import {logo} from '../assets/logo.png'
+import logo from '../assets/logo.png'
 
 
 function VideoCard(props) {
@@ -52,9 +52,10 @@ function VideoCard(props) {
           Your browser does not support the video tag.
         </video> */}
 
-        <div className='relative z-20 flex w-full items-center space-x-2 lg:space-x-20 xl:space-x-64'>
-          <Link to='/video' className='mx-auto lg:ml-20'>
-            <img className='w-40 mx-auto lg:ml-20' src={logo} alt="Logo" />
+        <div className='relative z-20 flex w-full  items-center space-x-2 lg:space-x-20 xl:space-x-64'>
+          <Link to='/video' className='mx-auto m-2 rounded-3xl p-2 bg-[#191818]  flex text-white items-center'>
+            <img className='w-11 mx-auto rounded-full p-1' src={logo} alt="Logo" />
+            <h1 className='ml-2'>Global news</h1>
           </Link>
         </div>
       </div>
