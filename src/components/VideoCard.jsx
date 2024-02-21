@@ -53,7 +53,7 @@ function VideoCard(props) {
 
         <div className='relative z-20 flex w-full items-center space-x-2 lg:space-x-20 xl:space-x-64'>
           <Link to='/video' className='mx-auto lg:ml-20'>
-            <img className='w-40 mx-auto lg:ml-20' src="https://assets-global.website-files.com/623ae64112adcf772da9687e/623b0335353b456141200393_pv%20logo-min.png" alt="Logo" />
+            <img className='w-40 mx-auto lg:ml-20' src="https://dribbble.com/shots/17151247-NewsVues-Logo-Design-Dark/attachments/12249321?mode=media" alt="Logo" />
           </Link>
         </div>
       </div>
