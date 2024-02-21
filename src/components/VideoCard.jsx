@@ -79,24 +79,24 @@ function VideoCard(props) {
           <p className='text-sm'>Investors who lost more than $100,000 in Focus Financial Partners Inc. (FOCS) during the period of February 27, 2023 to August 31, 2023 have until March 4, 2024 to file lead plaintiff applications in a class-action lawsuit alleging the company failed to disclose material information leading up to its acquisition by Clayton, Dubilier & Rice, LLC.</p>
         </div>
         <div className='my-2'>
-          <p className='text-lg font-bold'>Focus Financial Lawsuit</p>
-          <p className='text-sm'>Investors who lost more than $100,000 in Focus Financial Partners Inc. (FOCS) during the period of February 27, 2023 to August 31, 2023 have until March 4, 2024 to file lead plaintiff applications in a class-action lawsuit alleging the company failed to disclose material information leading up to its acquisition by Clayton, Dubilier & Rice, LLC.</p>
+          <p className='text-lg font-bold'>ESG Recognition for WuXi Biologics</p>
+          <p className='text-sm'>WuXi Biologics has been recognized as a 2024 Industry Top-Rated and Regional Top-Rated Company by Morningstar Sustainalytics' Environmental, Social and Governance (ESG) Ratings, marking the fourth consecutive year the company has achieved this honor. This recognition places WuXi Biologics in the top 2% of nearly 1,000 companies assessed in the pharmaceutical sector.</p>
         </div>
         <div className='my-2'>
-          <p className='text-lg font-bold'>Focus Financial Lawsuit</p>
-          <p className='text-sm'>Investors who lost more than $100,000 in Focus Financial Partners Inc. (FOCS) during the period of February 27, 2023 to August 31, 2023 have until March 4, 2024 to file lead plaintiff applications in a class-action lawsuit alleging the company failed to disclose material information leading up to its acquisition by Clayton, Dubilier & Rice, LLC.</p>
+          <p className='text-lg font-bold'>Geospatial Land Use Innovation</p>
+          <p className='text-sm'>In a major move, Regrid and Zoneomics have partnered to unveil the Standardized Zoning geospatial product. This innovation will provide professionals with comprehensive insights into land use permissions through national standardization of local zoning data sets. Regrid's Standardized Zoning product will be available through flexible delivery methods and includes 26 fields of zoning boundary data, revolutionizing land use planning and property insights across the United States.</p>
         </div>
         <div className='my-2'>
-          <p className='text-lg font-bold'>Focus Financial Lawsuit</p>
-          <p className='text-sm'>Investors who lost more than $100,000 in Focus Financial Partners Inc. (FOCS) during the period of February 27, 2023 to August 31, 2023 have until March 4, 2024 to file lead plaintiff applications in a class-action lawsuit alleging the company failed to disclose material information leading up to its acquisition by Clayton, Dubilier & Rice, LLC.</p>
+          <p className='text-lg font-bold'>Lighting Growth Opportunities</p>
+          <p className='text-sm'>Advancements in connectivity and wireless technologies are expected to drive the lighting industry in 2024.  Adoption of connected lighting solutions will surge, fueled by their energy efficiency, data insights, and improved user experience.  The lighting industry will see increased focus on sustainability and smart buildings, creating opportunities for revenue growth and technology development.</p>
         </div>
         <div className='my-2'>
-          <p className='text-lg font-bold'>Focus Financial Lawsuit</p>
-          <p className='text-sm'>Investors who lost more than $100,000 in Focus Financial Partners Inc. (FOCS) during the period of February 27, 2023 to August 31, 2023 have until March 4, 2024 to file lead plaintiff applications in a class-action lawsuit alleging the company failed to disclose material information leading up to its acquisition by Clayton, Dubilier & Rice, LLC.</p>
+          <p className='text-lg font-bold'>Medical Fiber Optics Market</p>
+          <p className='text-sm'>The global medical fiber optics market is anticipated to reach USD 1.7 Billion by 2030, driven by technological advancements, increasing healthcare expenditure, and rising prevalence of cancer. Leading players like Boston Scientific, Coherent, and IPG Photonics are shaping market trends. </p>
         </div>
         <div className='my-2'>
-          <p className='text-lg font-bold'>Focus Financial Lawsuit</p>
-          <p className='text-sm'>Investors who lost more than $100,000 in Focus Financial Partners Inc. (FOCS) during the period of February 27, 2023 to August 31, 2023 have until March 4, 2024 to file lead plaintiff applications in a class-action lawsuit alleging the company failed to disclose material information leading up to its acquisition by Clayton, Dubilier & Rice, LLC.</p>
+          <p className='text-lg font-bold'>Joint Replacement Devices Market Boom</p>
+          <p className='text-sm'>The global Joint Replacement Devices market is predicted to reach 27.1 billion USD by 2031, with a 5.7% CAGR. The market growth is driven by the rising prevalence of joint-related disorders and the increasing popularity of minimally invasive surgical techniques.</p>
         </div>
 
 
