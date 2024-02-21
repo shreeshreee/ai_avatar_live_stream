@@ -58,6 +58,11 @@ function VideoCard(props) {
         </div>
       </div>
       <div className='lg:h-[75vh] z-10 w-full relative'>
+        {/* <video autoPlay muted loop className='absolute inset-0 opacity-40 w-full h-full object-cover'>
+          <source src={background_video} type="video/webm" />
+          Your browser does not support the video tag.
+        </video>   */}
+        {/* <ReactPlayer width="100%" height="100%" className='react-player' url={`https://www.youtube.com/watch?v=9zMMogeBzyY`} controls /> */}
         <ReactPlayer
           playing={true}
           loop={true}
@@ -70,7 +75,7 @@ function VideoCard(props) {
       </div>
       <div className='bg-black'>
         <div className='mt-2 justify-between items-center my-auto p-4 text-white '>
-          <h1 className='font-sans text-2xl font-[700] pl-4'>Latest News Updates: {usaDate}</h1>
+          <h1 className='font-sans text-2xl font-[700] pl-4 lg:bg-[#111111] lg:inline-flex lg:p-4 lg:rounded-3xl'>Latest News Updates: {usaDate}</h1>
         </div>
         <div className=' text-center my-4 mx-auto font-sans text-white text-2xl font-[700]'><h3 className='bg-[#111111] inline-flex p-4 rounded-3xl'>News Content</h3></div>
         <div id="scrollbar-chat" className='w-[100%] h-[75vh] flex-col p-4 lg:p-10 text-white overflow-y-scroll scrollbar' >
