@@ -8,6 +8,9 @@ import logo from '../assets/siteLogo.png'
 import video from '../assets/news_video.mp4'
 
 function Live() {
+    useEffect(()=>{
+        localStorage.setItem('TAB','LIVE')
+    },[])
     const today = new Date();
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     const usaDate = today.toLocaleDateString('en-US', options);
