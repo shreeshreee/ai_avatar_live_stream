@@ -6,6 +6,7 @@ import { API } from '../ApiClient';
 import axios from "axios";
 import logo from '../assets/siteLogo.png'
 import video from '../assets/news_video.mp4'
+import { Radio } from 'lucide-react';
 
 function Live() {
     useEffect(()=>{
@@ -45,7 +46,7 @@ function Live() {
         }
     }
     return (
-        <div>
+        <div className='bg-black'>
             {/* <nav class="bg-white shadow flex">
                 <Link to='/home' className=' m-2 rounded-3xl p-2 flex'>
                     <img className=' mx-auto w-11 p-1' src={logo} alt="Logo" />
@@ -59,6 +60,9 @@ function Live() {
 
                 </div>
             </nav> */}
+            <div class="m-4">
+                <h1 class="text-4xl  text-center font-semibold text-white text-white lg:text-5xl">24/7 <span class="bg-gradient-to-r from-violet-500 to-red-500 bg-clip-text text-transparent">Live News</span></h1>
+            </div>
 
             <div className='lg:h-[75vh] z-10 w-full relative'>
                 {/* <video autoPlay muted loop className='absolute inset-0 opacity-40 w-full h-full object-cover'>
@@ -72,8 +76,9 @@ function Live() {
                     width="100%"
                     height="100%"
                     className='react-player'
-                    url={`https://apis.elai.io/public/video/65cdbdb04533bfff728207a5.mp4?s=8c1df9019f381bcf7a6027650c8999d035ec087e82a40ff1471ece5cda83ed11`}
+                    // url={`https://apis.elai.io/public/video/65cdbdb04533bfff728207a5.mp4?s=8c1df9019f381bcf7a6027650c8999d035ec087e82a40ff1471ece5cda83ed11`}
                     // url={'https://www.youtube.com/watch?v=qfHhtQYAeLA?modestbranding=0'}
+                    url={'https://www.youtube.com/watch?v=wPV9FxeQXxI'}
                     // url={video}
                     config={{
                         youtube: {
@@ -85,20 +90,45 @@ function Live() {
                     controls
                 />
             </div>
-            <div className='bg-white'>
+            <div className='bg-black text-white'>
                 <div className='mt-2 justify-between items-center p-4  '>
                     <h1 className='font-sans text-2xl font-[700] pl-4 lg:inline-flex lg:p-4 lg:rounded-3xl '>Latest News Updates: {usaDate}</h1>
                 </div>
                 {/* <div className=' text-center my-4 mx-auto font-sans text-white text-2xl font-[700]'><h3 className='bg-[#111111] inline-flex p-4 rounded-3xl'>News Content</h3></div> */}
-                <div id="scrollbar-chat" className='w-full bg-[rgba(239,252,252,0.9)] border-2 h-[75vh] justify-center flex flex-wrap p-2 lg:p-10  overflow-y-scroll scrollbar' >
+                {/* <div id="scrollbar-chat" className='w-full  h-[75vh] justify-center flex flex-wrap p-2 lg:p-10  overflow-y-scroll scrollbar' >
 
-                        {newsContent.map((news, index) => (
-                            <div className='border rounded-xl shadow-[0_5px_20px_1px_rgba(0,0,0,0.3)] bg-white mb-4 md:m-4 p-4 lg:w-[30%] flex flex-col  '>
-                                <img className='w-32 mx-auto p-2' src={logo} alt="Logo" />
-                                <p className='text-lg font-bold bg-gradient-to-r from-violet-800 to-red-600 bg-clip-text text-transparent'>{index + 1}. {news.headline}</p>
-                                <p className='text-sm leading-7'>{news.description}</p>
+                    {newsContent.map((news, index) => (
+                        // <div className='border rounded-xl shadow-[0_5px_20px_1px_rgba(0,0,0,0.3)] bg-white mb-4 md:m-4 p-4 lg:w-[30%] flex flex-col  '>
+                        //     <img className='w-32 mx-auto p-2' src={logo} alt="Logo" />
+                        //     <p className='text-lg font-bold bg-gradient-to-r from-violet-800 to-red-600 bg-clip-text text-transparent'>{index + 1}. {news.headline}</p>
+                        //     <p className='text-sm leading-7'>{news.description}</p>
+                        // </div>
+                        <div class="w-full h-80 rounded flex flex-col justify-around items-center p-8 bg-gray-900 rounded bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20">
+                            <div class="p-4 bg-fuchsia-700 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14">
+                                </polyline></svg></div><div><h3 class="text-lg font-bold sm:text-xl">24/7 Content Generation</h3></div><div>
+                                    <p class="text-sm sm:text-base text-center md:text-left">NewGenius keeps the content flowing round the clock with AI-powered algorithms, ensuring you're always ahead of the curve.</p></div></div>
+                    ))}
+                </div> */}
+                    <div class="w-full grid grid-cols-1 grid-rows-3 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1 gap-4 justify-between relative">
+                {newsContent.map((news, index) => (
+                        <div class="w-full h-80 rounded flex flex-col justify-around items-center p-8 bg-gray-900 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20">
+                            <div class="p-4 bg-fuchsia-700 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock">
+                                    {/* <circle cx="12" cy="12" r="10"></circle> */}
+                                    {/* <polyline points="12 6 12 12 16 14"></polyline> */}
+                                    <Radio />
+                                </svg>
                             </div>
-                        ))}
+                            <div>
+                                <h3 class="text-lg font-bold sm:text-xl">{index + 1}. {news.headline}</h3>
+                            </div>
+                            <div>
+                                <p class="text-sm sm:text-base text-start my-2">{news.description}</p>
+                            </div>
+                        </div>
+
+                        
+                ))}
                 </div>
 
             </div>

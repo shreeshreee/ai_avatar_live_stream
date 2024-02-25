@@ -13,7 +13,7 @@ import notifications from '../assets/notifications.png'
 
 function OurServices(){
     return(
-        <div className="w-full py-[5rem] px-4 bg-white mx-auto">
+        <div className="w-full py-[5rem] px-4 bg-black text-white mx-auto">
             <div className="max-w-[1240px] mx-auto p-4 flex justify-center mb-4">
                 <h1 className="md:text-4xl  sm:text-3xl text-2xl font-bold p-3 border-2 border-red-300  rounded-3xl bg-gradient-to-r from-violet-500 to-red-500 bg-clip-text text-transparent">Our Services</h1>
             </div>
