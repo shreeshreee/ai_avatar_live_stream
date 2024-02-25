@@ -33,8 +33,7 @@ function Hero() {
                             config={{ file: { attributes: { controlsList: 'nodownload' } } }}
                             playing={true}
                             loop={true}
-                            onContextMenu={e => e.preventDefault()}
-
+                            
                             url={cube}
                             className="react-player w-[70%]"
                             

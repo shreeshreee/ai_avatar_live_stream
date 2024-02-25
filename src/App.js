@@ -27,19 +27,19 @@ function App() {
 
             <NavLink to='/home' className='w-full lg:w-auto items-center flex'>
               {/* <img className='w-32 sticky p-2 mx-auto lg:ml-20' src={logo} alt="Logo" /> */}
-              <h1 className='w-56 sticky p-2 mx-auto lg:ml-20 text-white font-semibold text-4xl '>Globe news</h1>
+              <h1 className='w-56 sticky p-2 mx-auto lg:ml-20 text-white font-semibold text-4xl '><span className="bg-gradient-to-r from-red-500 to-violet-500 bg-clip-text text-transparent">Globe news</span></h1>
               {/* <h1 className="md:text-4xl  sm:text-3xl text-2xl font-bold p-3 border-2 border-red-300  rounded-3xl bg-gradient-to-r from-violet-500 to-red-500 bg-clip-text text-transparent">Our Services</h1> */}
             </NavLink>
 
             <div onClick={(e) => { setOpenMenu(!openMenu) }} className="absolute right-5 top-1/2 transform text-white -translate-y-1/2 md:hidden hover:scale-105 cursor-pointer">
               {openMenu ? <X size={30} /> : <Tally3 className="rotate-90" size={30} />}
             </div>
-            <div className={openMenu ? "fixed left-0 top-0 w-[60%] border-r h-full border-r-gray-900 bg-white ease-in-out duration-500 md:hidden" : 'fixed left-[-100%] top-0 w-[60%] border-r h-full border-r-gray-900 bg-white ease-out duration-500'}>
+            <div className={openMenu ? "fixed left-0 top-0 w-[60%] border-r h-full border-r-gray-900 bg-black text-white ease-in-out duration-500 md:hidden" : 'fixed left-[-100%] top-0 w-[60%] border-r h-full border-r-gray-900 bg-white ease-out duration-500'}>
               <h1 className='w-full m-4 text-3xl font-bold '><span className="text-red-500">Live</span> News.</h1>
               <ul className="p-4 uppercase">
                 <li className="mb-4 p-4 border-b border- text-white cursor-pointer hover:bg-gray-200 hover:scale-105 duration-300"><a href="/home">Home</a></li>
-                <li className="mb-4 p-4 border-b border-black cursor-pointer hover:bg-gray-200 hover:scale-105 duration-300"><a href="/live">Live</a></li>
-                <li className="mb-4 p-4 border-b border-black cursor-pointer hover:bg-gray-200 hover:scale-105 duration-300"><a href="/about">About Us</a></li>
+                <li className="mb-4 p-4 border-b border-white cursor-pointer hover:bg-gray-200 hover:scale-105 duration-300"><a href="/live">Live</a></li>
+                <li className="mb-4 p-4 border-b border-white cursor-pointer hover:bg-gray-200 hover:scale-105 duration-300"><a href="/about">About Us</a></li>
               </ul>
             </div>
 
