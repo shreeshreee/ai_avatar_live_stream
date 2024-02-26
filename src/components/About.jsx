@@ -1,10 +1,13 @@
 import React from "react";
 import Footer from "../pages/Footer";
+import useStore from '../VariableStore';
 
 function About() {
+
+    const { toggleDarkTheme, darkTheme } = useStore()
     return (
         <div className=''>
-            <div className="w-full py-[1rem] px-4 bg-black text-white mx-auto">
+            <div className={`${darkTheme ? "bg-[#0e0e0e]" : "bg-white"} w-full py-[1rem] px-4 ${darkTheme ? "text-white" : "text-black"} mx-auto`}>
 
                 <div className="max-w-[1240px] mx-auto grid">
                     <div className="flex flex-col justify-center">
@@ -15,10 +18,10 @@ function About() {
                 </div>
 
 
-                <h1 className="md:text-5xl sm:text-3xl text-2xl mt-4 font-bold py-2 text-center my-2  ">Our Vision:</h1>
+                <h1 className={`md:text-4xl sm:text-3xl text-2xl mt-4 font-bold py-2 ${darkTheme ? "text-white" : "text-black"} text-center my-2  `}><span class="">Our Vision:</span></h1>
                 <div id="scrollbar-chat" className='w-full  justify-center flex flex-wrap lg:p-0' >
-                    <div className=" w-full border rounded-xl bg-black   mb-4 p-2 md:p-4 lg:w-[30%] flex flex-col shadow-[0_5px_20px_1px_rgba(0,0,0,0.3)] ">
-                        <h1 className="text-4xl text-blue-800 font-semibold text-center  lg:mb-7">Freedom from Human Bias:</h1>
+                    <div className={`${darkTheme ? "bg-[#0e0e0e]" : "bg-white"} w-full border rounded-xl   mb-4 p-2 md:p-4 lg:w-[30%] flex flex-col shadow-[0_5px_20px_1px_rgba(0,0,0,0.3)] `}>
+                        <h1 className={`${darkTheme ? "text-white" : "text-blue-800"} lg:text-3xl text-xl font-semibold text-center  lg:mb-7`}>Freedom from Human Bias:</h1>
                         <div className="flex my-2 items-center px-5 py-0 rounded-[0_30px_30px_0] hover:transition-[0.3s]">
                             <div className="w-full mx-auto h-full rounded-[40px] bg-gradient-to-r from-violet-500 to-red-500">
                                 <div className="h-[2px] bg-transparent rounded-[40px]"></div>
@@ -29,9 +32,9 @@ function About() {
                         <p className="p-2 leading-8 font-sans">Being an AI-driven platform, it relies on data and algorithms, not humans, to generate news articles, eliminating personal opinions and agendas. </p>
                         <p className="p-2 leading-8 font-sans">Viewers are encouraged to help our AI learn by reporting fake news and sharing the truth.</p>
                     </div>
-                    <div className=" w-full border rounded-xl bg-black mb-4 p-2 md:p-4 md:mx-4 lg:w-[30%] flex flex-col shadow-[0_5px_20px_1px_rgba(0,0,0,0.3)] ">
-                        <h1 className="text-3xl text-blue-800 font-semibold text-center lg:mb-7">Comprehensive Coverage and Diverse Perspectives:</h1>
-                        <div className="flex my-2 items-center px-5 py-0 rounded-[0_30px_30px_0] hover:transition-[0.3s]">
+                    <div className={`${darkTheme ? "bg-[#0e0e0e]" : "bg-white"} w-full border rounded-xl mb-4 p-2 md:p-4 md:mx-4 lg:w-[30%] flex flex-col shadow-[0_5px_20px_1px_rgba(0,0,0,0.3)] `}>
+                        <h1 className={`${darkTheme ? "text-white" : "text-blue-800"} lg:text-3xl text-xl font-semibold text-center lg:mb-7`}>Comprehensive Coverage and Diverse Perspectives:</h1>
+                        <div className="flex my-0 items-center px-5 py-0 rounded-[0_30px_30px_0] hover:transition-[0.3s]">
                             <div className="w-full mx-auto h-full rounded-[40px] bg-gradient-to-r from-violet-500 to-red-500">
                                 <div className="h-[2px] bg-transparent rounded-[40px]"></div>
                             </div>
@@ -41,8 +44,8 @@ function About() {
                         <p className="p-2 leading-8 font-sans">By analyzing diverse perspectives, it offers viewers a holistic understanding of complex issues. Our algorithms are always learning and always improving.</p>
 
                     </div>
-                    <div className=" w-full border rounded-xl bg-black mb-4 p-2 md:p-4 lg:w-[30%] flex flex-col shadow-[0_5px_20px_1px_rgba(0,0,0,0.3)] ">
-                        <h1 className="text-4xl text-blue-800 font-semibold text-center lg:mb-7">A Glimpse into the Future:</h1>
+                    <div className={`${darkTheme ? "bg-[#0e0e0e]" : "bg-white"} w-full border rounded-xl mb-4 p-2 md:p-4 lg:w-[30%] flex flex-col shadow-[0_5px_20px_1px_rgba(0,0,0,0.3)] `}>
+                        <h1 className={`${darkTheme ? "text-white" : "text-blue-800"} lg:text-3xl text-xl font-semibold text-center lg:mb-7`}>A Glimpse into the Future:</h1>
                         <div className="flex my-2 items-center px-5 py-0 rounded-[0_30px_30px_0] hover:transition-[0.3s]">
                             <div className="w-full mx-auto h-full rounded-[40px] bg-gradient-to-r from-violet-500 to-red-500">
                                 <div className="h-[2px] bg-transparent rounded-[40px]"></div>

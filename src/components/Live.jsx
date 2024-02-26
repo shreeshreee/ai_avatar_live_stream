@@ -7,8 +7,10 @@ import axios from "axios";
 import logo from '../assets/siteLogo.png'
 import video from '../assets/news_video.mp4'
 import { Radio } from 'lucide-react';
+import useStore from '../VariableStore';
 
 function Live() {
+    const { toggleDarkTheme, darkTheme } = useStore()
     const today = new Date();
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     const usaDate = today.toLocaleDateString('en-US', options);
@@ -43,22 +45,9 @@ function Live() {
         }
     }
     return (
-        <div className='bg-black'>
-            {/* <nav class="bg-white shadow flex">
-                <Link to='/home' className=' m-2 rounded-3xl p-2 flex'>
-                    <img className=' mx-auto w-11 p-1' src={logo} alt="Logo" />
-                    <h1 className='ml-2'>Global news</h1>
-                </Link>
-                <div class="container flex items-center justify-center p-6 mx-auto text-gray-600 capitalize ">
-
-                    <a href="/home" class="text-gray-800 transition-colors duration-300 transform  border-b-2 border-blue-500 mx-1.5 sm:mx-6">home</a>
-
-                    <a href="#" class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform  hover:border-blue-500 mx-1.5 sm:mx-6">features</a>
-
-                </div>
-            </nav> */}
-            <div class="m-4">
-                <h1 class="text-4xl  text-center font-semibold text-white text-white lg:text-5xl">24/7 <span class="bg-gradient-to-r from-violet-500 to-red-500 bg-clip-text text-transparent">Live News</span></h1>
+        <div className={`${darkTheme ? "bg-[#0e0e0e]" : "bg-white"}`}>
+            <div class="mb-4">
+                <h1 class={`text-4xl  text-center font-semibold ${darkTheme ? "text-white" : "text-black"} lg:text-5xl`}>24/7 <span class="bg-gradient-to-r from-violet-500 to-red-500 bg-clip-text text-transparent">Live News</span></h1>
             </div>
 
             <div className='lg:h-[75vh] z-10 w-full relative'>
@@ -73,9 +62,9 @@ function Live() {
                     width="100%"
                     height="100%"
                     className='react-player'
-                    url={`https://apis.elai.io/public/video/65cdbdb04533bfff728207a5.mp4?s=8c1df9019f381bcf7a6027650c8999d035ec087e82a40ff1471ece5cda83ed11`}
+                    // url={`https://apis.elai.io/public/video/65cdbdb04533bfff728207a5.mp4?s=8c1df9019f381bcf7a6027650c8999d035ec087e82a40ff1471ece5cda83ed11`}
                     // url={'https://www.youtube.com/watch?v=qfHhtQYAeLA?modestbranding=0'}
-                    // url={'https://www.youtube.com/watch?v=wPV9FxeQXxI'}
+                    url={'https://www.youtube.com/watch?v=wPV9FxeQXxI'}
                     // url={video}
                     config={{
                         youtube: {
@@ -87,8 +76,8 @@ function Live() {
                     controls
                 />
             </div>
-            <div className='bg-black text-white'>
-                <div className='mt-2 justify-between items-center p-4  '>
+            <div className={`${darkTheme ? "bg-[#0e0e0e]" : "bg-white"} ${darkTheme ? "text-white" : "text-black"}`}>
+                <div className='pt-2 justify-between items-center p-4  '>
                     <h1 className='font-sans text-2xl font-[700] pl-4 lg:inline-flex lg:p-4 lg:rounded-3xl '>Latest News Updates: {usaDate}</h1>
                 </div>
                 {/* <div className=' text-center my-4 mx-auto font-sans text-white text-2xl font-[700]'><h3 className='bg-[#111111] inline-flex p-4 rounded-3xl'>News Content</h3></div> */}
@@ -113,7 +102,7 @@ function Live() {
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock">
                                     {/* <circle cx="12" cy="12" r="10"></circle> */}
                                     {/* <polyline points="12 6 12 12 16 14"></polyline> */}
-                                    <Radio />
+                                    <Radio className={`${darkTheme ? "text-white" : "text-white"}`}/>
                                 </svg>
                             </div>
                             <div>
