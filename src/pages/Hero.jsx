@@ -5,7 +5,7 @@ import { Dot } from 'lucide-react';
 import ReactPlayer from 'react-player'
 // import Typed from 'react-typed'
 import cube from '../assets/cubic.mp4'
-import earthR from '../assets/earthRotating.mp4'
+// import earthR from '../assets/earthRotating.mp4'
 // import earth from '../assets/earth.mp4'
 import useStore from "../VariableStore";
 
