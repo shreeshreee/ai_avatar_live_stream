@@ -5,7 +5,7 @@ function Footer() {
         <div className="bg-black">
             <div className="max-w-[1240px] mx-auto py-16 px-4 grid lg:grid-cols-2 gap-8 text-gray-300">
                 <div>
-                    <h1 className='w-full text-3xl font-bold text-white'><span className="text-[#49ff55]">Live</span> News.</h1>
+                    <h1 className='w-full text-3xl font-bold text-white'><span className="text-[#49ff55]">Info</span> Sphere.</h1>
                     {/* <p className="md:text-[1rem] text-left p-0 py-4 m-0">Experience the pulse of the world with our live news application, delivering real-time updates and insights straight to your fingertips. Stay informed, stay connected, and stay ahead with the latest news, wherever you are.</p> */}
                     <p className="md:text-[1rem] text-left p-0 py-4 m-0">Our live news application harnesses the power of AI to deliver timely and reliable content sourced from public news channels. With an emphasis on efficiency and robustness, we aim to provide users with accurate and up-to-date information in real-time, ensuring they stay informed about global events effortlessly.</p>
                     <div className="flex justify-between md:w-[75%] my-6">

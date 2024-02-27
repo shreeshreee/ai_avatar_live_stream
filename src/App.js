@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 import logo from './assets/logo.png'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import About from "./components/About";
-import { Tally3, X } from 'lucide-react';
+import { AlignJustify, X } from 'lucide-react';
 import WebsocketStreaming from "./components/WebsocketStreaming";
 import useStore from "./VariableStore";
 import { ToggleLeft, ToggleRight, Moon, SunMoon } from 'lucide-react';
@@ -29,16 +29,15 @@ function App() {
     <>
       <Router>
         <div className={`sticky top-0 z-20 ${darkTheme ? "bg-[#0e0e0e]" : "bg-white"} w-full`}>
-          <nav class={`${darkTheme ? "bg-[#0e0e0e]" : "bg-white"} bg-black shadow flex border-b-[0.25px] border-gradient-violet-red `}>
-
+          <nav class={`${darkTheme ? "bg-black border-gray-900" : "bg-white"} shadow flex border-b `}>
             <NavLink to='/home' className='w-full lg:w-auto items-center flex'>
               {/* <img className='w-32 sticky p-2 mx-auto lg:ml-20' src={logo} alt="Logo" /> */}
-              <h1 className='w-72 items-center sticky p-2 mx-auto lg:ml-20 font-semibold text-2xl flex '><span><img className="w-10 m-2 rounded-md" src={logo} /></span><span className={`${darkTheme ? "text-white" : "text-black"} text-stroke font-bold`}>Globe news</span></h1>
+              <h1 className='w-72 items-center justify-center sticky p-2 mx-auto lg:ml-20 font-semibold text-2xl flex '><span><img className="w-10 m-2 rounded-md" src={logo} /></span><span className={`${darkTheme ? "text-white" : "text-black"} text-stroke font-bold`}>InfoSphere</span></h1>
               {/* <h1 className="md:text-4xl  sm:text-3xl text-2xl font-bold p-3 border-2 border-red-300  rounded-3xl bg-gradient-to-r from-violet-500 to-red-500 bg-clip-text text-transparent">Our Services</h1> */}
             </NavLink>
 
-            <div onClick={(e) => { setOpenMenu(!openMenu) }} className={`absolute right-5 top-1/2 transform ${darkTheme ? "text-white" : "text-black"} -translate-y-1/2 md:hidden hover:scale-105 cursor-pointer`}>
-              {openMenu ? <X size={30} /> : <Tally3 className="rotate-90" size={30} />}
+            <div onClick={(e) => { setOpenMenu(!openMenu) }} className={`absolute right-5 top-1/2 transform ${darkTheme ? "text-white" : "text-black"} -translate-y-1/2 md:hidden hover:scale-105 cursor-pointer `}>
+              {openMenu ? <X size={30} /> : <AlignJustify className="" size={30} />}
             </div>
             <div className={`${darkTheme ? "bg-[#0e0e0e]" : "bg-white"} ${openMenu ? "fixed left-0 top-0 w-[60%] border-r h-full border-r-gray-900 text-white ease-in-out duration-500 md:hidden" : "fixed left-[-100%] top-0 w-[60%] border-r h-full border-r-gray-900 bg-white ease-out duration-500"}`}>
               <h1 className={`w-full m-4 text-3xl ${darkTheme ? "text-white" : "text-black"} font-bold `}><span className="text-red-500">Live</span> News.</h1>
@@ -77,13 +76,13 @@ function App() {
               {
                 darkTheme ? (
                   <div className="flex items-center">
-                    <span className="w-24 ">Light Mode</span>
+                    {/* <span className="w-24 ">Light Mode</span> */}
                     < SunMoon className="text-white w-7 h-7 lg:cursor-pointer" />
                   </div>
 
                 ) : (
                   <div className="flex items-center">
-                    <span className="w-24 ">Dark Mode</span>
+                    {/* <span className="w-24 ">Dark Mode</span> */}
                     <Moon className="text-black w-7 h-7 lg:cursor-pointer" />
                   </div>
                 )
