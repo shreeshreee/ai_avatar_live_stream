@@ -12,15 +12,15 @@ import About from "./components/About";
 import { Tally3, X } from 'lucide-react';
 import WebsocketStreaming from "./components/WebsocketStreaming";
 import useStore from "./VariableStore";
-import { ToggleLeft, ToggleRight } from 'lucide-react';
+import { ToggleLeft, ToggleRight, Moon, SunMoon } from 'lucide-react';
 
 function App() {
   // localStorage.setItem('DARKTHEME',Boolean(false))
-  const { toggleDarkTheme, darkTheme } = useStore() 
-  const darkTheme2=localStorage.getItem('DARKTHEME')===false ? false : true
+  const { toggleDarkTheme, darkTheme } = useStore()
+  const darkTheme2 = localStorage.getItem('DARKTHEME') === false ? false : true
   // const serverBaseURL = 'http://localhost:8000/stream_summary'
   const [openMenu, setOpenMenu] = useState(false)
-  console.log(darkTheme,localStorage.getItem('DARKTHEME'),darkTheme2,typeof(darkTheme),typeof(localStorage.getItem('DARKTHEME')))
+  console.log(darkTheme, localStorage.getItem('DARKTHEME'), darkTheme2, typeof (darkTheme), typeof (localStorage.getItem('DARKTHEME')))
   // function handleNav() {
 
   // }
@@ -42,16 +42,16 @@ function App() {
             </div>
             <div className={`${darkTheme ? "bg-[#0e0e0e]" : "bg-white"} ${openMenu ? "fixed left-0 top-0 w-[60%] border-r h-full border-r-gray-900 text-white ease-in-out duration-500 md:hidden" : "fixed left-[-100%] top-0 w-[60%] border-r h-full border-r-gray-900 bg-white ease-out duration-500"}`}>
               <h1 className={`w-full m-4 text-3xl ${darkTheme ? "text-white" : "text-black"} font-bold `}><span className="text-red-500">Live</span> News.</h1>
-              <div onClick={(e)=>{toggleDarkTheme(darkTheme); localStorage.setItem('DARKTHEME',darkTheme)}} className=" mr-10 w-full flex items-center justify-end">
-              {
-                darkTheme ? (
-                  <ToggleRight className="text-white w-10 h-10 lg:cursor-pointer" />
+              <div onClick={(e) => { toggleDarkTheme(darkTheme); localStorage.setItem('DARKTHEME', darkTheme) }} className=" mr-10 w-full flex items-center justify-end">
+                {
+                  darkTheme ? (
+                    <ToggleRight className="text-white w-10 h-10 lg:cursor-pointer" />
 
-                ) : (
-                  <ToggleLeft className="text-black w-10 h-10 lg:cursor-pointer" />
-                )
-              }
-            </div>
+                  ) : (
+                    <ToggleLeft className="text-black w-10 h-10 lg:cursor-pointer" />
+                  )
+                }
+              </div>
               <ul className="p-4 uppercase ">
                 <li className={`mb-4 p-4 border-b ${darkTheme ? "text-white" : "text-black border-gray-600"} cursor-pointer hover:bg-gray-200 hover:scale-105 duration-300`}><a href="/home">Home</a></li>
                 <li className={`mb-4 p-4 border-b ${darkTheme ? "text-white" : "text-black border-gray-600"} cursor-pointer hover:bg-gray-200 hover:scale-105 duration-300`}><a href="/live">Live</a></li>
@@ -66,13 +66,19 @@ function App() {
               {/* <a href="#" class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform  hover:border-blue-500 mx-1.5 sm:mx-6">features</a> */}
             </div>
 
-            <div onClick={(e)=>{toggleDarkTheme(darkTheme); localStorage.setItem('DARKTHEME',darkTheme)}} className=" hidden mr-10 lg:flex items-center ">
+            <div onClick={(e) => { toggleDarkTheme(darkTheme); localStorage.setItem('DARKTHEME', darkTheme) }} class={`${darkTheme ? "text-white" : "text-black"} hidden mr-10 lg:flex items-center`}>
               {
                 darkTheme ? (
-                  <ToggleRight className="text-white w-10 h-10 lg:cursor-pointer" />
+                  <div className="flex items-center">
+                    <span className="w-24 ">Light Mode</span>
+                    < SunMoon className="text-white w-7 h-7 lg:cursor-pointer" />
+                  </div>
 
                 ) : (
-                  <ToggleLeft className="text-black w-10 h-10 lg:cursor-pointer" />
+                  <div className="flex items-center">
+                    <span className="w-20 ">Dark Mode</span>
+                    <Moon className="text-black w-7 h-7 lg:cursor-pointer" />
+                  </div>
                 )
               }
             </div>
