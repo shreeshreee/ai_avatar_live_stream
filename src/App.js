@@ -42,21 +42,28 @@ function App() {
             </div>
             <div className={`${darkTheme ? "bg-[#0e0e0e]" : "bg-white"} ${openMenu ? "fixed left-0 top-0 w-[60%] border-r h-full border-r-gray-900 text-white ease-in-out duration-500 md:hidden" : "fixed left-[-100%] top-0 w-[60%] border-r h-full border-r-gray-900 bg-white ease-out duration-500"}`}>
               <h1 className={`w-full m-4 text-3xl ${darkTheme ? "text-white" : "text-black"} font-bold `}><span className="text-red-500">Live</span> News.</h1>
-              <div onClick={(e) => { toggleDarkTheme(darkTheme); localStorage.setItem('DARKTHEME', darkTheme) }} className=" mr-10 w-full flex items-center justify-end">
+
+              <ul className="px-4  ">
+                <li className={` p-4 border-b ${darkTheme ? "text-white" : "text-black border-gray-600"} cursor-pointer hover:bg-gray-200 hover:scale-105 duration-300`}><a href="/home">Home</a></li>
+                <li className={` p-4 border-b ${darkTheme ? "text-white" : "text-black border-gray-600"} cursor-pointer hover:bg-gray-200 hover:scale-105 duration-300`}><a href="/live">Live</a></li>
+                <li className={` p-4 border-b ${darkTheme ? "text-white" : "text-black border-gray-600"} cursor-pointer hover:bg-gray-200 hover:scale-105 duration-300`}><a href="/about">About Us</a></li>
+              </ul>
+              <div onClick={(e) => { toggleDarkTheme(darkTheme); localStorage.setItem('DARKTHEME', darkTheme) }} className="px-4 w-full flex items-center">
                 {
                   darkTheme ? (
-                    <ToggleRight className="text-white w-10 h-10 lg:cursor-pointer" />
+                    <div className="flex w-full items-center p-4 border-b">
+                      <span className="w-24 text-white ">Light Mode</span>
+                      < SunMoon className="text-white w-7 h-7 lg:cursor-pointer" />
+                    </div>
 
                   ) : (
-                    <ToggleLeft className="text-black w-10 h-10 lg:cursor-pointer" />
+                    <div className="flex w-full items-center p-4 border-b border-gray-600 ">
+                      <span className="w-24 text-black">Dark Mode</span>
+                      <Moon className="text-black w-6 h-6 lg:cursor-pointer" />
+                    </div>
                   )
                 }
               </div>
-              <ul className="p-4 uppercase ">
-                <li className={`mb-4 p-4 border-b ${darkTheme ? "text-white" : "text-black border-gray-600"} cursor-pointer hover:bg-gray-200 hover:scale-105 duration-300`}><a href="/home">Home</a></li>
-                <li className={`mb-4 p-4 border-b ${darkTheme ? "text-white" : "text-black border-gray-600"} cursor-pointer hover:bg-gray-200 hover:scale-105 duration-300`}><a href="/live">Live</a></li>
-                <li className={`mb-4 p-4 border-b ${darkTheme ? "text-white" : "text-black border-gray-600"} cursor-pointer hover:bg-gray-200 hover:scale-105 duration-300`}><a href="/about">About Us</a></li>
-              </ul>
             </div>
 
             <div class={`${darkTheme ? "text-white" : "text-black"} hidden container md:flex items-center justify-center p-6 mx-auto capitalize `}>
@@ -76,7 +83,7 @@ function App() {
 
                 ) : (
                   <div className="flex items-center">
-                    <span className="w-20 ">Dark Mode</span>
+                    <span className="w-24 ">Dark Mode</span>
                     <Moon className="text-black w-7 h-7 lg:cursor-pointer" />
                   </div>
                 )

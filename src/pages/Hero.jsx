@@ -26,7 +26,7 @@ function Hero() {
 
                             <p className={`mt-3 text-center lg:text-left ${darkTheme ? "text-white" : "text-gray-600"} dark:text-black-400 lg:text-md`}>Experience the pulse of the world with our live news application, delivering real-time updates and insights straight to your fingertips. Stay informed, stay connected, and stay ahead with the latest news, wherever you are.</p>
                             <div className="mx-auto my-3 flex w-full">
-                                <a onClick={(e) => { localStorage.setItem('TAB', 'LIVE') }} class=" text-sm tracking-wider text-white uppercase transition-colors duration-300 transform bg-red-600 rounded-lg lg:w-auto hover:bg-red-500 focus:outline-none focus:bg-red-500 flex items-center" href="/live"><Dot className="h-10 w-10 animate-pulse" /><p className="mr-4">Watch Live</p></a>
+                                <a onClick={(e) => { localStorage.setItem('TAB', 'LIVE') }} class=" text-sm tracking-wider mx-auto lg:mx-0 text-white uppercase transition-colors duration-300 transform bg-red-600 rounded-lg lg:w-auto hover:bg-red-500 focus:outline-none focus:bg-red-500 flex items-center" href="/live"><Dot className="h-10 w-10 animate-pulse" /><p className="mr-4">Watch Live</p></a>
                             </div>
                         </div>
                     </div>
