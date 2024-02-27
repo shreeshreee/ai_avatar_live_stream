@@ -85,8 +85,15 @@ function Live() {
                 <div id="scrollbar-chat" className='w-full justify-center flex flex-wrap p-2 lg:p-10' >
 
                     {newsContent.map((news, index) => (
-                        <div className={` rounded-xl shadow-[0_5px_20px_1px_rgba(0,0,0,0.3)]  ${darkTheme ? "bg-[#0e0e0e]" : "bg-white"} mb-4 md:m-4 p-4 lg:w-[30%] flex flex-col  `}>
-                            <img className='w-32 mx-auto p-2' src={logo} alt="Logo" />
+                        <div className={` rounded-xl shadow-[0_5px_20px_1px_rgba(0,0,0,0.3)]  ${darkTheme ? "bg-[#1e1e1e]" : "bg-white"} mb-4 md:m-4 p-4 lg:w-[30%] flex flex-col  `}>
+                            {/* <img className='w-32 mx-auto p-2' src={logo} alt="Logo" /> */}
+                            <div class="p-4 bg-fuchsia-700 rounded-full mx-auto my-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock">
+                                    {/* <circle cx="12" cy="12" r="10"></circle> */}
+                                    {/* <polyline points="12 6 12 12 16 14"></polyline> */}
+                                    <Radio className={`${darkTheme ? "text-white" : "text-white"}`} />
+                                </svg>
+                            </div>
                             <p className={`text-lg text-center mb-4 font-bold ${darkTheme ? "text-white" : "bg-gradient-to-r from-violet-800 to-red-600 bg-clip-text text-transparent"}`}>{index + 1}. {news.headline}</p>
                             <p className={`${darkTheme ? "text-white" : "text-black"} text-sm leading-7 font-serif`} >{news.description}</p>
                         </div>

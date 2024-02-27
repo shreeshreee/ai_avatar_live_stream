@@ -13,6 +13,7 @@ import useStore from "../VariableStore";
 import Lottie from "lottie-react";
 import newsletter from "../assets/newsletter.json";
 import LiveStreaming from "../assets/LiveStreaming.json";
+import trendingBars from "../assets/trendingBars.json";
 
 
 function OurServices(){
@@ -33,7 +34,7 @@ function OurServices(){
 
             <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
                 {/* <img className="w-[350px] mx-auto my-4 rounded-3xl" src={liveStreaming}  alt="/" /> */}
-                <Lottie className=" w-auto mx-auto my-4 rounded-3xl" animationData={LiveStreaming} loop={true} />
+                <Lottie className=" w-auto h-72 mx-auto my-4 rounded-3xl" animationData={LiveStreaming} loop={true} />
                 <div className="flex flex-col justify-center md:order-first">
                     <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold py-2"><span className="text-blue-600">24/7</span> Live <span className="text-red-500">Streaming</span></h1>
                     <p className="md:text-[1rem] text-left p-0 m-0">Experience news like never before with our 24/7 live streaming feature. Our platform offers uninterrupted access to live news broadcasts, keeping you connected to the pulse of the world around the clock.</p>
@@ -41,13 +42,23 @@ function OurServices(){
             </div>
 
             <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
-                {/* <img className="w-[350px] mx-auto my-4 rounded-3xl" src={notifications}  alt="/" /> */}
-                <Lottie className="w-auto mx-auto my-4 rounded-3xl" animationData={newsletter} loop={true} />
+                {/* <img className="w-[350px] mx-auto my-4 rounded-3xl" src={trendingBars}  alt="/" /> */}
+                <Lottie className="w-auto h-72 mx-auto my-4 rounded-3xl" animationData={trendingBars} loop={true} />
                 <div className="flex flex-col justify-center">
-                    <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold py-2">Get <span className="text-blue-500">Notificed</span></h1>
+                    <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold py-2"><span className="text-blue-500">Trends</span> </h1>
+                    <p className="md:text-[1rem] text-left p-0 m-0">From consumer preferences to technological innovations, globe news keeps you informed about current trends and empowered to make strategic decisions. Keep your finger on the pulse of what's hot and what's next with our trend analysis tool.</p>
+                </div>
+            </div>
+
+            <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
+                {/* <img className="w-[350px] mx-auto my-4 rounded-3xl" src={liveStreaming}  alt="/" /> */}
+                <Lottie className=" w-auto mx-auto my-4 rounded-3xl" animationData={newsletter} loop={true} />
+                <div className="flex flex-col justify-center md:order-first">
+                <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold py-2">Get <span className="text-blue-500">Notificed</span></h1>
                     <p className="md:text-[1rem] text-left p-0 m-0">Stay ahead of the curve with our Newsletter feature, where users can subscribe to our newsletter and receive the latest news updates directly to their inbox. By subscribing, users gain access to a curated selection of breaking news, top stories, and insightful analyses, ensuring they never miss a beat.</p>
                 </div>
             </div>
+
 
             
         </div>

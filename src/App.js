@@ -73,7 +73,7 @@ function App() {
               {/* <a href="#" class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform  hover:border-blue-500 mx-1.5 sm:mx-6">features</a> */}
             </div>
 
-            <div onClick={(e) => { toggleDarkTheme(darkTheme); localStorage.setItem('DARKTHEME', darkTheme) }} class={`${darkTheme ? "text-white" : "text-black"} hidden mr-10 lg:flex items-center`}>
+            <div onClick={(e) => { toggleDarkTheme(darkTheme); localStorage.setItem('DARKTHEME', darkTheme) }} class={`${darkTheme ? "text-white" : "text-black"} cursor-pointer hidden mr-10 lg:flex items-center`}>
               {
                 darkTheme ? (
                   <div className="flex items-center">
