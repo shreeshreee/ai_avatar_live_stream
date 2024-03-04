@@ -128,7 +128,7 @@ function News() {
                         <img src={newsContent[0].img_url} alt="Article" className="w-[100%]" />
                         {/* <span className="absolute bottom-2 left-2 text-red-600">Latest Update</span> */}
                         </div>
-                        <p className="text-xs text-gray-600 my-1 font-roboto font-semibold">{convertToEST(newsContent[0].datetime)}</p>
+                        <p className="text-xs text-gray-600 my-1 font-roboto font-semibold">{formatDate(newsContent[0].datetime)}</p>
                         <h2 className="text-xl mt-5 mb-5 font-bold">{newsContent[0].headline}</h2>
                         <p className="my-5">{newsContent[0].description}</p>
                     </div>
@@ -137,7 +137,7 @@ function News() {
                         <div className="">
                             <img src={newsContent[1].img_url} alt="Article" className="w-full" />
 
-                            <p className="text-xs text-gray-600 my-1 font-roboto font-semibold">{convertToEST(newsContent[1].datetime)}</p>
+                            <p className="text-xs text-gray-600 my-1 font-roboto font-semibold">{formatDate(newsContent[1].datetime)}</p>
                             <h2 className=" text-xl mt-5 font-bold">{newsContent[1].headline}</h2>
                             <p className="my-5">{newsContent[1].description}</p>
                         </div>
@@ -147,7 +147,7 @@ function News() {
                         <div className="">
                             <img src={newsContent[2].img_url} alt="Article" className="w-full" />
 
-                            <p className="text-xs text-gray-600 my-1 font-roboto font-semibold">{convertToEST(newsContent[2].datetime)}</p>
+                            <p className="text-xs text-gray-600 my-1 font-roboto font-semibold">{formatDate(newsContent[2].datetime)}</p>
                             <h2 className=" text-xl mt-5 font-bold">{newsContent[2].headline}</h2>
                             <p className="my-5">{newsContent[2].description}</p>
                         </div>
