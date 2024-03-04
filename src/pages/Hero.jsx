@@ -16,9 +16,9 @@ import earthAnimation from "../assets/earthAnimation.json";
 function Hero() {
     const { toggleDarkTheme, darkTheme } = useStore()
     return (
-        <header class={`${darkTheme ? "bg-black" : "bg-white"}`}>
+        <header class={`font-roboto ${darkTheme ? "bg-black" : "bg-white"}`}>
 
-            <div class="container px-6 p-5 lg:p-14 mx-auto">
+            <div class="container px-6 p-4 lg:p-14 mx-auto">
                 <div class="items-center lg:flex">
 
                     <div class="flex lg:hidden items-center justify-center w-full lg:mt-0 lg:w-1/2">
@@ -58,7 +58,7 @@ function Hero() {
 
                     <div class="w-full lg:w-1/2 flex justify-center">
                         <div class="w-full lg:max-w-lg">
-                            <h1 className={`text-4xl text-center lg:text-left font-bold  ${darkTheme ? "text-white" : "text-black"} lg:text-6xl`}>Real-time news <br /> at your <span class="bg-gradient-to-r from-violet-500 to-red-500 bg-clip-text text-transparent">fingertips.</span></h1>
+                            <h1 className={`text-4xl text-center lg:text-left font-extrabold  ${darkTheme ? "text-white" : "text-black"} lg:text-6xl`}>Real-time news <br /> at your <span class="bg-gradient-to-r from-violet-500 to-red-500 bg-clip-text text-transparent">fingertips.</span></h1>
 
                             <p className={`mt-3 text-center lg:text-left ${darkTheme ? "text-white" : "text-gray-600"} dark:text-black-400 lg:text-md`}>Experience the pulse of the world with our live news, delivering real-time updates and insights straight to your fingertips. Stay informed, stay connected, and stay ahead with the latest news, wherever you are.</p>
                             <div className="mx-auto my-3 flex w-full">

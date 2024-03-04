@@ -7,7 +7,7 @@ function About() {
     const { toggleDarkTheme, darkTheme } = useStore()
     return (
         <div className=''>
-            <div className={`${darkTheme ? "bg-[#0e0e0e]" : "bg-white"} w-full py-[1rem] px-4 ${darkTheme ? "text-white" : "text-black"} mx-auto`}>
+            <div className={`font-roboto ${darkTheme ? "bg-[#0e0e0e]" : "bg-white"} w-full py-[1rem] px-4 ${darkTheme ? "text-white" : "text-black"} mx-auto`}>
 
                 <div className="max-w-[1240px] mx-auto grid">
                     <div className="flex flex-col justify-center">
@@ -16,7 +16,7 @@ function About() {
                         <p className=" md:text-[1rem] pl-2 p-0 m-0 text-center">we are dedicated to revolutionizing the way people consume news and stay informed about global events. Our platform is built on the foundation of innovation, integrity, and inclusivity, with a mission to empower individuals with accurate, unbiased, and timely information.</p>
                     </div>
                 </div>
-
+        
 
                 <h1 className={`md:text-4xl sm:text-3xl text-2xl mt-4 font-bold py-2 ${darkTheme ? "text-white" : "text-black"} text-center my-2  `}><span class="">Our Vision:</span></h1>
                 <div id="scrollbar-chat" className='w-full  justify-center flex flex-wrap lg:p-0' >

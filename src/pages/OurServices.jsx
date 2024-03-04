@@ -19,10 +19,13 @@ import trendingBars from "../assets/trendingBars.json";
 function OurServices(){
     const { toggleDarkTheme, darkTheme } = useStore() 
     return(
-        <div className={`w-full py-[5rem] px-4 ${darkTheme ? "bg-black" : "bg-white"} ${darkTheme ? "text-white" : "text-black"} mx-auto`}>
+        <div className={`w-full font-roboto py-[5rem] px-4 ${darkTheme ? "bg-black" : "bg-white"} ${darkTheme ? "text-white" : "text-black"} mx-auto`}>
             <div className="max-w-[1240px] mx-auto p-4 flex justify-center mb-4">
                 <h1 className={`md:text-5xl  sm:text-3xl text-2xl font-bold p-3 ${darkTheme ? "border-b-2 border-blue-500" : "border-b-2"} rounded-3xl bg-gradient-to-r from-violet-500 to-red-500 bg-clip-text text-transparent`}>Our Services</h1>
             </div>
+
+            
+
             <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
                 <img className="w-[350px] mx-auto my-4 rounded-3xl" src={latestNews}  alt="/" />
                 {/* <Lottie className=" w-auto mx-auto my-4 rounded-3xl" animationData={LiveStreaming} loop={true} /> */}
@@ -58,6 +61,8 @@ function OurServices(){
                     <p className="md:text-[1rem] text-left p-0 m-0">Stay ahead of the curve with our Newsletter feature, where users can subscribe to our newsletter and receive the latest news updates directly to their inbox. By subscribing, users gain access to a curated selection of breaking news, top stories, and insightful analyses, ensuring they never miss a beat.</p>
                 </div>
             </div>
+
+            
 
 
             

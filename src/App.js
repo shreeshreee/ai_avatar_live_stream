@@ -13,6 +13,7 @@ import { AlignJustify, X } from 'lucide-react';
 import WebsocketStreaming from "./components/WebsocketStreaming";
 import useStore from "./VariableStore";
 import { ToggleLeft, ToggleRight, Moon, SunMoon } from 'lucide-react';
+import News from "./components/News";
 
 function App() {
   // localStorage.setItem('DARKTHEME',Boolean(false))
@@ -28,7 +29,7 @@ function App() {
   return (
     <>
       <Router>
-        <div className={`sticky top-0 z-20 ${darkTheme ? "bg-[#0e0e0e]" : "bg-white"} w-full`}>
+        <div className={`sticky top-0 z-20  ${darkTheme ? "bg-[#0e0e0e]" : "bg-white"} w-full`}>
           <nav class={`${darkTheme ? "bg-black border-gray-900" : "bg-white"} shadow flex border-b `}>
             <NavLink to='/home' className='w-full lg:w-auto items-center flex'>
               {/* <img className='w-32 sticky p-2 mx-auto lg:ml-20' src={logo} alt="Logo" /> */}
@@ -43,9 +44,10 @@ function App() {
               <h1 className={`w-full m-4 text-3xl ${darkTheme ? "text-white" : "text-black"} font-bold `}><span className="text-red-500">Live</span> News.</h1>
 
               <ul className="px-4  ">
-                <li className={` p-4 border-b ${darkTheme ? "text-white" : "text-black border-gray-600"} cursor-pointer hover:bg-gray-200 hover:scale-105 duration-300`}><a href="/home">Home</a></li>
-                <li className={` p-4 border-b ${darkTheme ? "text-white" : "text-black border-gray-600"} cursor-pointer hover:bg-gray-200 hover:scale-105 duration-300`}><a href="/live">Live</a></li>
-                <li className={` p-4 border-b ${darkTheme ? "text-white" : "text-black border-gray-600"} cursor-pointer hover:bg-gray-200 hover:scale-105 duration-300`}><a href="/about">About Us</a></li>
+              <a onClick={(e) => { localStorage.setItem('TAB', 'HOME  ') }} href="/home" className="w-full"><li className={` p-4 border-b ${darkTheme ? "text-white" : "text-black "} ${localStorage.getItem('TAB') === 'HOME' ? ' transition-colors duration-300 transform text-blue-600 border-b-2 border-blue-500':'border-gray-600'} cursor-pointer hover:bg-gray-200 `}>Home</li></a>
+              <a onClick={(e) => { localStorage.setItem('TAB', 'LIVE') }} href="/live"><li className={` p-4 border-b ${darkTheme ? "text-white" : "text-black "} ${localStorage.getItem('TAB') === 'LIVE' ? ' transition-colors duration-300 transform text-blue-600 border-b-2 border-blue-500':'border-gray-600'} cursor-pointer hover:bg-gray-200 `}>Live</li></a>
+              <a onClick={(e) => { localStorage.setItem('TAB', 'NEWS') }} href="/news"><li className={` p-4 border-b ${darkTheme ? "text-white" : "text-black "} ${localStorage.getItem('TAB') === 'NEWS' ? ' transition-colors text-blue-600 duration-300 transform text-blue-600 border-b-2 border-blue-500':'border-gray-600'} cursor-pointer hover:bg-gray-200 `}>News</li></a>
+              <a onClick={(e) => { localStorage.setItem('TAB', 'ABOUT') }} href="/about"><li className={` p-4 border-b ${darkTheme ? "text-white" : "text-black"} ${localStorage.getItem('TAB') === 'ABOUT' ? ' transition-colors duration-300 transform text-blue-600 border-b-2 border-blue-500':'border-gray-600 '} cursor-pointer hover:bg-gray-200 `}>About Us</li></a>
               </ul>
               <div onClick={(e) => { toggleDarkTheme(darkTheme); localStorage.setItem('DARKTHEME', darkTheme) }} className="px-4 w-full flex items-center">
                 {
@@ -65,10 +67,11 @@ function App() {
               </div>
             </div>
 
-            <div class={`${darkTheme ? "text-white" : "text-black"} hidden container md:flex items-center justify-center p-6 mx-auto capitalize `}>
-              <a onClick={(e) => { localStorage.setItem('TAB', 'HOME') }} href="/home" class={`text-xl ${localStorage.getItem('TAB') === 'HOME' ? ' transition-colors duration-300 transform  border-b-2 border-blue-500' : 'border-b-2  border-transparent transition-colors duration-300 transform  hover:border-blue-500'} mx-1.5 sm:mx-6`}>Home</a>
-              <a onClick={(e) => { localStorage.setItem('TAB', 'LIVE') }} href="/live" class={`text-xl ${localStorage.getItem('TAB') === 'LIVE' ? ' transition-colors duration-300 transform  border-b-2 border-blue-500' : 'border-b-2  border-transparent  transition-colors duration-300 transform  hover:border-blue-500'} mx-1.5 sm:mx-6`}>Live</a>
-              <a onClick={(e) => { localStorage.setItem('TAB', 'ABOUT') }} href="/about" class={`text-xl ${localStorage.getItem('TAB') === 'ABOUT' ? ' transition-colors duration-300 transform  border-b-2 border-blue-500' : 'border-b-2  border-transparent transition-colors duration-300 transform  hover:border-blue-500'} mx-1.5 sm:mx-6`}>About us</a>
+            <div class={`${darkTheme ? "text-white" : "text-black"} hidden container text-lg md:flex items-center justify-center p-6 mx-auto capitalize `}>
+              <a onClick={(e) => { localStorage.setItem('TAB', 'HOME') }} href="/home" class={`${localStorage.getItem('TAB') === 'HOME' ? ' transition-colors duration-300 transform  border-b-2 border-blue-500' : 'border-b-2  border-transparent transition-colors duration-300 transform  hover:border-blue-500'} mx-1.5 sm:mx-6`}>Home</a>
+              <a onClick={(e) => { localStorage.setItem('TAB', 'LIVE') }} href="/live" class={`${localStorage.getItem('TAB') === 'LIVE' ? ' transition-colors duration-300 transform  border-b-2 border-blue-500' : 'border-b-2  border-transparent  transition-colors duration-300 transform  hover:border-blue-500'} mx-1.5 sm:mx-6`}>Live</a>
+              <a onClick={(e) => { localStorage.setItem('TAB', 'NEWS') }} href="/news" class={`${localStorage.getItem('TAB') === 'NEWS' ? ' transition-colors duration-300 transform  border-b-2 border-blue-500' : 'border-b-2  border-transparent  transition-colors duration-300 transform  hover:border-blue-500'} mx-1.5 sm:mx-6`}>News</a>
+              <a onClick={(e) => { localStorage.setItem('TAB', 'ABOUT') }} href="/about" class={`${localStorage.getItem('TAB') === 'ABOUT' ? ' transition-colors duration-300 transform  border-b-2 border-blue-500' : 'border-b-2  border-transparent transition-colors duration-300 transform  hover:border-blue-500'} mx-1.5 sm:mx-6`}>About us</a>
               {/* <a href="#" class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform  hover:border-blue-500 mx-1.5 sm:mx-6">features</a> */}
             </div>
 
@@ -96,6 +99,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/live" element={<Live />} />
           <Route path="/about" element={<About />} />
+          <Route path='/news' element={<News />} />
           <Route path="/test" element={<TestVideo />} />
           <Route path="/video" element={<VideoCard />} />
           <Route path="/stream" element={<LiveStream />} />
