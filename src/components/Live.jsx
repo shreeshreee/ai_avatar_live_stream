@@ -47,11 +47,11 @@ function Live() {
     }
     return (
         <div className={` ${darkTheme ? "bg-[#0e0e0e]" : "bg-white"}`}>
-            <div class="mb-4">
-                <h1 class={`font-poppins text-4xl  text-center font-semibold ${darkTheme ? "text-white" : "text-black"} lg:text-5xl`}>24/7 <span class="bg-gradient-to-r from-violet-500 to-red-500 bg-clip-text text-transparent">Live News</span></h1>
+            <div class="mb-3">
+                <h1 class={`font-poppins text-2xl pt-2 text-center font-semibold ${darkTheme ? "text-white" : "text-black"} lg:text-4xl`}>24/7 <span class="bg-gradient-to-r from-violet-500 to-red-500 bg-clip-text text-transparent">Live News</span></h1>
             </div>
 
-            <div className='lg:h-[70vh] z-10 w-full relative'>
+            <div className='lg:h-[72vh] z-10 w-full relative'>
                 {/* <video autoPlay muted loop className='absolute inset-0 opacity-40 w-full h-full object-cover'>
           <source src={background_video} type="video/webm" />
           Your browser does not support the video tag.
@@ -66,7 +66,7 @@ function Live() {
                     // url={`https://apis.elai.io/public/video/65cdbdb04533bfff728207a5.mp4?s=8c1df9019f381bcf7a6027650c8999d035ec087e82a40ff1471ece5cda83ed11`}
                     // url={'https://www.youtube.com/watch?v=qfHhtQYAeLA?modestbranding=0'}
                     // url={'https://www.youtube.com/watch?v=wPV9FxeQXxI'}
-                    url='https://www.youtube.com/watch?v=E-4z-XNWZHU'
+                    url='https://youtu.be/E-4z-XNWZHU'
                     // url={video}
                     config={{
                         youtube: {
@@ -79,8 +79,8 @@ function Live() {
                 />
             </div>
             <div className={`font-poppins ${darkTheme ? "bg-[#0e0e0e]" : "bg-white"} ${darkTheme ? "text-white" : "text-black"}`}>
-                <div className='font-poppins pt-2 justify-between items-center p-4  '>
-                    <h1 className='text-2xl font-extrabold pl-4 lg:inline-flex lg:p-4 lg:rounded-3xl '>Latest News Updates: {usaDate}</h1>
+                <div className='font-poppins justify-between items-center p-2'>
+                    <h1 className='text-md lg:text-2xl font-extrabold lg:pl-4 lg:inline-flex lg:p-4 lg:rounded-3xl '>Latest News Updates: {usaDate}</h1>
                 </div>
                 {/* <div className=' text-center my-4 mx-auto font-sans text-white text-2xl font-[700]'><h3 className='bg-[#111111] inline-flex p-4 rounded-3xl'>News Content</h3></div> */}
                 <div id="scrollbar-chat" className='w-full justify-center flex flex-wrap p-2 lg:p-10' >
