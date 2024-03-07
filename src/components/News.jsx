@@ -76,7 +76,6 @@ function News() {
             if (response.status === 200) {
 
                 setNewsContent(response.data.news_articles);
-                console.log(response.data.news_articles)
             }
             setLoading(false)
         } catch (error) {
