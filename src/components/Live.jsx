@@ -64,7 +64,7 @@ function Live() {
                     // url={`https://apis.elai.io/public/video/65cdbdb04533bfff728207a5.mp4?s=8c1df9019f381bcf7a6027650c8999d035ec087e82a40ff1471ece5cda83ed11`}
                     // url={'https://www.youtube.com/watch?v=qfHhtQYAeLA?modestbranding=0'}
                     // url={'https://www.youtube.com/watch?v=wPV9FxeQXxI'}
-                    url='https://www.youtube.com/watch?v=n941WMM-QwY'
+                    url='https://www.youtube.com/live/cBeMHR0HEUA?si=zjN5XqTwsDzggZ-n'
                     // url={video}
                     config={{
                         youtube: {
